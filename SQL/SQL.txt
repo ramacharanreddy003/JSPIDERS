@@ -1,6 +1,5 @@
 					SQL
 SQL> select *from emp;
-
      EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
 ---------- ---------- --------- ---------- --------- ---------- ---------- ----------
       7369 SMITH      CLERK           7902 17-DEC-80        800                    20
@@ -19,10 +18,7 @@ SQL> select *from emp;
       7934 MILLER     CLERK           7782 23-JAN-82       1300                    10
 
 14 rows selected.
-
-
 SQL> select *from emp where deptno=10 or deptno=20 or deptno=30;
-
      EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
 ---------- ---------- --------- ---------- --------- ---------- ---------- ----------
       7369 SMITH      CLERK           7902 17-DEC-80        800                    20
@@ -40,13 +36,9 @@ SQL> select *from emp where deptno=10 or deptno=20 or deptno=30;
       7902 FORD       ANALYST         7566 03-DEC-81       3000                    20
       7934 MILLER     CLERK           7782 23-JAN-82       1300                    10
 
-
 SQL> DELETE FROM EMP WHERE ENAME IN('SMITH','WARD','JONES','MARTIN');
-
 4 rows deleted.
-
 SQL> SELECT *FROM EMP;
-
      EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
 ---------- ---------- --------- ---------- --------- ---------- ---------- ----------
       7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30
@@ -56,15 +48,12 @@ SQL> SELECT *FROM EMP;
       7876 ADAMS      CLERK           7788 23-MAY-87       1100                    20
       7900 JAMES      CLERK           7698 03-DEC-81        950                    30
       7934 MILLER     CLERK           7782 23-JAN-82       1300                    10
-
 7 rows selected.
 
 SQL> DELETE FROM EMP;
-
 7 rows deleted.
 
 SQL> SELECT *FROM EMP;
-
 no rows selected
 
 SQL> INSERT INTO EMP VALUES(8000,'SUNIL','CLERK',7698,'23-JAN-81',1300,NULL,10);
@@ -90,12 +79,10 @@ SQL> SELECT *FROM EMP;
       7900 JAMES      CLERK           7698 03-DEC-81        950                    30
       7902 FORD       ANALYST         7566 03-DEC-81       3000                    20
       7934 MILLER     CLERK           7782 23-JAN-82       1300                    10
-
 16 rows selected.
 
 SQL> INSERT INTO EMP VALUES(7001,'SUMATHI','ANALYST',7566,'17-DEC-81',
   2  3000,NULL,20);
-
 1 row created.
 
 SQL> SELECT *FROM EMP;
@@ -123,7 +110,6 @@ SQL> SELECT *FROM EMP;
 17 rows selected.
 
 SQL> INSERT INTO EMP VALUES (7002,'SHYAM','CLERK',7782,'22-JAN-80',1300,NULL,10);
-
 1 row created.
 
 SQL> SELECT *FROM EMP;
@@ -224,7 +210,6 @@ SQL> select *from emp where deptno=10 or deptno=20;
 
 8 rows selected.
 
-
 SQL> select *from emp where job='MANAGER' or job='CLERK' and job='SALESMAN';
 
    EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
@@ -232,7 +217,6 @@ SQL> select *from emp where job='MANAGER' or job='CLERK' and job='SALESMAN';
     7566 JONES      MANAGER         7839 02-APR-81       2975                    20
     7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30
     7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10
-
 
 SQL> select *from emp 
   2  where job='MANAGER' or job='CLERK' or job='SALESMAN';
@@ -252,8 +236,6 @@ SQL> select *from emp
       7934 MILLER     CLERK           7782 23-JAN-82       1300                    10
 
 11 rows selected.
-
-
 
 SQL> select *from emp where job='SALESMAN' and SAL>=2000;
 
@@ -276,7 +258,6 @@ SQL> select *from emp where job='SALESMAN' or SAL>=2000;
 
 10 rows selected.
 
-
 SQL> select *from emp where sal>1000 and sal<=4000;
 
      EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
@@ -292,9 +273,8 @@ SQL> select *from emp where sal>1000 and sal<=4000;
       7876 ADAMS      CLERK           7788 23-MAY-87       1100                    20
       7902 FORD       ANALYST         7566 03-DEC-81       3000                    20
       7934 MILLER     CLERK           7782 23-JAN-82       1300                    10
-
-
 11 rows selected.
+
 SQL> select *from emp where deptno=10 or deptno=20 and
   2  deptno=30;
 
@@ -303,9 +283,6 @@ SQL> select *from emp where deptno=10 or deptno=20 and
       7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10
       7839 KING       PRESIDENT            17-NOV-81       5000                    10
       7934 MILLER     CLERK           7782 23-JAN-82       1300                    10
-
-
-
 
 QL> select *from emp where sal>1000 and (deptno=10 or deptno=30);
 
@@ -352,7 +329,6 @@ SQL> select *from emp where deptno!=10 and deptno !=20;
       7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30
       7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30
       7900 JAMES      CLERK           7698 03-DEC-81        950                    30
-
 6 rows selected.
 
 SQL> select *from emp where not(deptno=20 and deptno=30);
@@ -443,7 +419,6 @@ SQL> select *from emp where hiredate='23-JAN-82';
 ---------- ---------- --------- ---------- --------- ---------- ---------- ----------
       7934 MILLER     CLERK           7782 23-JAN-82       1300                    10
 
-
 SQL> select *from emp where hiredate='23-JAN-82';
 
      EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
@@ -470,7 +445,6 @@ SQL> select *from emp where hiredate >='01-JAN-80';
       7934 MILLER     CLERK           7782 23-JAN-82       1300                    10
 
 14 rows selected.
-
 SQL> select *from emp where(hiredate>='10-JAN-80' and hiredate<='01-DEC-82');
 
      EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
@@ -489,7 +463,6 @@ SQL> select *from emp where(hiredate>='10-JAN-80' and hiredate<='01-DEC-82');
       7934 MILLER     CLERK           7782 23-JAN-82       1300                    10
 
 12 rows selected.
-
 SQL> select *from emp where(hiredate>='10-JAN-80' and hiredate<='01-DEC-82') and(deptno!=20);
 
      EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
@@ -706,13 +679,6 @@ SQL> SELECT *FROM EMP WHERE ENAME LIKE 'S_OTT';
 ---------- ---------- --------- ---------- --------- ---------- ---------- ----------
       7788 SCOTT      ANALYST         7566 19-APR-87       3000                    20
 
-SQL> SELECT *FROM ENAME WHERE ENAME LIKE 'M___ER';
-SELECT *FROM ENAME WHERE ENAME LIKE 'M___ER'
-             *
-ERROR at line 1:
-ORA-00942: table or view does not exist
-
-
 SQL> SELECT *FROM EMP WHERE ENAME LIKE 'M___ER';
 
      EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
@@ -724,12 +690,6 @@ SQL> SELECT *FROM EMP WHERE ENAME LIKE '____T';
      EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
 ---------- ---------- --------- ---------- --------- ---------- ---------- ----------
       7788 SCOTT      ANALYST         7566 19-APR-87       3000                    20
-
-SQL> SELECT *FROM EMP WHERE ENAME LIKE '%A%A%;
-ERROR:
-ORA-01756: quoted string not properly terminated
-
-
 SQL> SELECT *FROM EMP WHERE ENAME LIKE '%A%A%';
 
      EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
@@ -873,78 +833,6 @@ SQL> SELECT *FROM EMP WHERE JOB LIKE 'MAN%';
       7566 JONES      MANAGER         7839 02-APR-81       2975                    20
       7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30
       7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10
-
-
-SQL> select * from emp;
-
-     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
----------- ---------- --------- ---------- --------- ---------- ----------
-    DEPTNO
-----------
-      7369 SMITH      CLERK           7902 17-DEC-80        800
-        20
-
-      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300
-        30
-
-      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500
-        30
-
-
-     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
----------- ---------- --------- ---------- --------- ---------- ----------
-    DEPTNO
-----------
-      7566 JONES      MANAGER         7839 02-APR-81       2975
-        20
-
-      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400
-        30
-
-      7698 BLAKE      MANAGER         7839 01-MAY-81       2850
-        30
-
-
-     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
----------- ---------- --------- ---------- --------- ---------- ----------
-    DEPTNO
-----------
-      7782 CLARK      MANAGER         7839 09-JUN-81       2450
-        10
-
-      7788 SCOTT      ANALYST         7566 19-APR-87       3000
-        20
-
-      7839 KING       PRESIDENT            17-NOV-81       5000
-        10
-
-
-     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
----------- ---------- --------- ---------- --------- ---------- ----------
-    DEPTNO
-----------
-      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0
-        30
-
-      7876 ADAMS      CLERK           7788 23-MAY-87       1100
-        20
-
-      7900 JAMES      CLERK           7698 03-DEC-81        950
-        30
-
-
-     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
----------- ---------- --------- ---------- --------- ---------- ----------
-    DEPTNO
-----------
-      7902 FORD       ANALYST         7566 03-DEC-81       3000
-        20
-
-      7934 MILLER     CLERK           7782 23-JAN-82       1300
-        10
-
-
-14 rows selected.
 
 SQL> set lines 200 pages 200;
 SQL> select * from emp;
@@ -1259,8 +1147,6 @@ SQL> SELECT *FROM EMP WHERE COMM IS NULL;
       7934 MILLER     CLERK           7782 23-JAN-82       1300                    10
 
 10 rows selected.
-
-
 SQL> SELECT *FROM EMP WHERE MGR IS NOT NULL;
 
      EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
@@ -1280,7 +1166,6 @@ SQL> SELECT *FROM EMP WHERE MGR IS NOT NULL;
       7934 MILLER     CLERK           7782 23-JAN-82       1300                    10
 
 13 rows selected.
-
 
 SQL> SELECT *FROM EMP WHERE COMM IS NOT NULL;
 
@@ -1306,11 +1191,7 @@ SQL> SELECT *FROM EMP WHERE
       7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10
       7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30
       7876 ADAMS      CLERK           7788 23-MAY-87       1100                    20
-      7900 JAMES      CLERK           7698 03-DEC-81        950                    30
-
 9 rows selected.
-
-
 SQL> select *from emp;
 
      EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
@@ -1331,9 +1212,6 @@ SQL> select *from emp;
       7934 MILLER     CLERK           7782 23-JAN-82       1300                    10
 
 14 rows selected.
-
-
-
 SQL> select *from emp;
 
      EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
@@ -1354,9 +1232,6 @@ SQL> select *from emp;
       7934 MILLER     CLERK           7782 23-JAN-82       1300                    10
 
 14 rows selected.
-
-
-
 SQL> select * from emp where mgr is not null and deptno in (10,30);
 
      EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
@@ -1414,7 +1289,6 @@ FORD             3000      36000
 MILLER           1300      15600
 
 8 rows selected.
-
 
 SQL> select *from emp where ename not like '%ES' or ename not like '%R';
 
@@ -1483,7 +1357,6 @@ MILLER           1300      15600
 
 8 rows selected.
 
-
 SQL> desc emp;
  Name                                                                                                              Null?    Type
  ----------------------------------------------------------------------------------------------------------------- -------- -------------------------------
@@ -1503,13 +1376,11 @@ SQL>  INSERT INTO EMP(EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,DEPTNO) VALUES(70000000,'
 ERROR at line 1:
 ORA-01438: value larger than specified precision allowed for this column
 
-
 SQL>  INSERT INTO EMP(EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,DEPTNO) VALUES(70000000,'RAM','ANALYST',7566,'01/01/2001',7000,1000,20);
  INSERT INTO EMP(EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,DEPTNO) VALUES(70000000,'RAM','ANALYST',7566,'01/01/2001',7000,1000,20)
              *
 ERROR at line 1:
 ORA-00913: too many values
-
 
 SQL> insert into emp values(7000,'RAVI','ANALYST',7566,'17-DEC-81',3000,NULL,20);
 insert into emp values(7000,'RAVI','ANALYST',7566,'17-DEC-81',3000,NULL,20)
@@ -1517,14 +1388,11 @@ insert into emp values(7000,'RAVI','ANALYST',7566,'17-DEC-81',3000,NULL,20)
 ERROR at line 1:
 ORA-00001: unique constraint (SCOTT.PK_EMP) violated
 
-
-
 SQL> insert into emp values(70000000000,'RAVI','ANALYST',7566,'17-DEC-81',3000,NULL,20);
 insert into emp values(70000000000,'RAVI','ANALYST',7566,'17-DEC-81',3000,NULL,20)
                        *
 ERROR at line 1:
 ORA-01438: value larger than specified precision allowed for this column
-
 
 SQL> insert into emp values(7000,'RAVIIIIIIIIIIIIIIIIIIIIIIII','ANALYST',7566,'17-DEC-81',3000,NULL,20);
 insert into emp values(7000,'RAVIIIIIIIIIIIIIIIIIIIIIIII','ANALYST',7566,'17-DEC-81',3000,NULL,20)
@@ -1576,7 +1444,6 @@ INSERT INTO EMP VALUES (7001,'RAVI','CLERK',7902,'01-JAN-2008',500000,1000,30)
 ERROR at line 1:
 ORA-01438: value larger than specified precision allowed for this column
 
-
 SQL> INSERT INTO EMP VALUES(7005,NULL,NULL,NULL,NULL,500.23,1000,NULL);
 
 1 row created.
@@ -1605,7 +1472,6 @@ SQL> SELECT *FROM EMP;
 
 17 rows selected.
 
-
 SQL>  INSERT INTO EMP VALUES(NULL,NULL,NULL,NULL,NULL,500.23,1000,NULL);
  INSERT INTO EMP VALUES(NULL,NULL,NULL,NULL,NULL,500.23,1000,NULL)
                         *
@@ -1625,13 +1491,11 @@ SQL> SELECT *FROM DEPT;
         30 SALES          CHICAGO
         40 OPERATIONS     BOSTON
 
-
 SQL> INSERT INTO DEPT VALUES(50,'HR','BANGLORE');
 INSERT INTO DEPT VALUES(50,'HR','BANGLORE')
 *
 ERROR at line 1:
 ORA-00001: unique constraint (SCOTT.PK_DEPT) violated
-
 
 SQL> INSERT INTO EMP (SAL,EMPNO,ENAME) VALUES(8000,7010,'RAM CHARAN');
 
@@ -1662,13 +1526,11 @@ SQL> SELECT *  FROM EMP;
 
 18 rows selected.
 
-
 SQL> INSERT INTO EMP(ENAME) VALUES('SURESH');
 INSERT INTO EMP(ENAME) VALUES('SURESH')
 *
 ERROR at line 1:
 ORA-01400: cannot insert NULL into ("SCOTT"."EMP"."EMPNO")
-
 
 SQL> UPDATE EMP SET ENAME='SUMATHI' WHERE EMPNO=7005;
 
@@ -1728,7 +1590,6 @@ SQL> SELECT *FROM EMP;
 
 18 rows selected.
 
-
 SQL> UPDATE EMP SET ENAME='RAM CHARAN' WHERE EMPNO=7000;
 
 1 row updated.
@@ -1754,7 +1615,6 @@ SQL> SELECT *FROM EMP;
       7934 MILLER     CLERK           7782 23-JAN-82       1300                    10
 
 15 rows selected.
-
 
 SQL> UPDATE EMP SET SAL=3000 WHERE EMPNO=7934;
 
@@ -1782,7 +1642,6 @@ SQL> SELECT *FROM EMP;
 
 15 rows selected.
 
-
 SQL> UPDATE EMP SET JOB='MANAGER',MGR=7829,HIREDATE='22-JAN-81',SAL=5000 WHERE ENAME='MILLER';
 
 1 row updated.
@@ -1808,7 +1667,6 @@ SQL> SELECT *FROM EMP;
       7934 MILLER     MANAGER         7829 22-JAN-81       5000                    10
 
 15 rows selected.
-
 
 SQL> UPDATE EMP SET SAL=SAL*0.3 WHERE DEPTNO=10;
 
@@ -1940,7 +1798,6 @@ SQL> SELECT *FROM EMP;
       7934 MILLER     CLERK           7782 23-JAN-82       1300                    10
 
 15 rows selected.
-
 
 SQL>  INSERT INTO EMP (EMPNO,JOB,MGR,SAL,DEPTNO) VALUES(7001,'MANAGER',7839,1500,10);
 
@@ -2103,7 +1960,6 @@ SQL> SELECT *FROM EMP;
 
 15 rows selected.
 
-
 SQL> UPDATE EMP SET EMPNO=7000 WHERE ENAME='SMITH';
 UPDATE EMP SET EMPNO=7000 WHERE ENAME='SMITH'
 *
@@ -2230,4 +2086,3 @@ SQL> SELECT *FROM EMP;
       7934 MILLER     CLERK           7782 23-JAN-82       1820                    10
 
 18 rows selected.
-
